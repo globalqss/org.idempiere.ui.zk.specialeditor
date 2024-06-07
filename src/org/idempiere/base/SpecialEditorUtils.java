@@ -1,7 +1,7 @@
 package org.idempiere.base;
 
 import org.adempiere.webui.apps.AEnv;
-import org.adempiere.webui.window.FDialog;
+import org.adempiere.webui.window.Dialog;
 import org.compiere.model.GridTab;
 import org.compiere.model.MFactAcct;
 import org.compiere.model.PO;
@@ -28,6 +28,6 @@ public class SpecialEditorUtils {
 	{
 		String error = AEnv.postImmediate (mTab.getWindowNo(), po.getAD_Client_ID(), po.get_Table_ID(), po.get_ID(), true);
 		if (error != null)
-			FDialog.error(0, null, "PostingError-N", error);
+			Dialog.error(0, "PostingError-N", error);
 	}
 }
